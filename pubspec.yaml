@@ -1,0 +1,58 @@
+name: drift777
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # стейт менеджер 
+  rxdart: ^0.27.1
+
+  # SQLite бд
+  drift: ^1.6.0
+  sqlite3_flutter_libs: ^0.5.5
+  sqlite3: ^1.7.0
+  path_provider: ^2.0.2
+  path: ^1.8.0
+
+  # время и дата
+  intl: ^0.17.0
+  js:
+  # ui
+  drift_db_viewer: ^1.0.3
+
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+  
+  equatable: ^2.0.3
+  http: ^0.13.4
+
+
+
+dev_dependencies:
+  drift_dev: any
+  build_runner: ^2.1.8
+  # We use this to compile the shared web worker for the web database. This dependency
+  # isn't required for most apps. You only need it if you want to target the web, use
+  # web workers for drift AND want to compile those web workers through `build_runner`.
+  # Either way, using this package with Flutter requires a delicate setup described in
+  # `build.yaml`.
+  build_web_compilers: ^3.2.2
+  flutter_test:
+    sdk: flutter
+
+dependency_overrides:
+  js: ^0.6.4
+
+
+flutter:
+  uses-material-design: true
