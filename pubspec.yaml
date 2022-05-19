@@ -14,32 +14,32 @@ dependencies:
     sdk: flutter
 
 
-  # стейт менеджер 
+ 
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
   rxdart: ^0.27.1
 
-  # SQLite бд
+  equatable: ^2.0.3
+
+  # for web
+  http: ^0.13.4
+
+
+  # SQLite 
   drift: ^1.6.0
   sqlite3_flutter_libs: ^0.5.5
   sqlite3: ^1.7.0
+
   path_provider: ^2.0.2
   path: ^1.8.0
   
-  #  # локализация и языки
+ 
   flutter_localizations:
     sdk: flutter 
   intl: ^0.17.0
 
-  # js:
-  # ui
+ 
   drift_db_viewer: ^1.0.3
-
-  bloc: ^8.0.3
-  flutter_bloc: ^8.0.1
-  
-  equatable: ^2.0.3
-  http: ^0.13.4
-
-
 
 dev_dependencies:
   drift_dev: any
@@ -49,9 +49,6 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
-
-# dependency_overrides:
-#   js: ^0.6.4
 
 
 flutter_intl:
