@@ -23,10 +23,13 @@ dependencies:
   sqlite3: ^1.7.0
   path_provider: ^2.0.2
   path: ^1.8.0
-
-  # время и дата
+  
+  #  # локализация и языки
+  flutter_localizations:
+    sdk: flutter 
   intl: ^0.17.0
-  js:
+
+  # js:
   # ui
   drift_db_viewer: ^1.0.3
 
@@ -41,18 +44,27 @@ dependencies:
 dev_dependencies:
   drift_dev: any
   build_runner: ^2.1.8
-  # We use this to compile the shared web worker for the web database. This dependency
-  # isn't required for most apps. You only need it if you want to target the web, use
-  # web workers for drift AND want to compile those web workers through `build_runner`.
-  # Either way, using this package with Flutter requires a delicate setup described in
-  # `build.yaml`.
   build_web_compilers: ^3.2.2
+  build: ^2.2.1
+
   flutter_test:
     sdk: flutter
 
-dependency_overrides:
-  js: ^0.6.4
+# dependency_overrides:
+#   js: ^0.6.4
+
+
+flutter_intl:
+  enabled: true # Required. Must be set to true to activate the plugin. Default: false
+  class_name: Lang # Optional. Sets the name for the generated localization class. Default: S
+  output_dir: lib/src/common/l10n/generated
+  arb_dir: lib/src/common/l10n/arb
+  use_deferred_loading: true
+  # main_locale: en # Optional. Sets the main locale used for generating localization files. Provided value should comply with ISO-639-1 and ISO-3166-1 (e.g. "en", "en_GB"). Default: en
 
 
 flutter:
   uses-material-design: true
+  # generate: true
+  # assets:
+  #   - assets/
