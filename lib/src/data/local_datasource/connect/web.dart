@@ -30,7 +30,8 @@ DatabaseConnection connect({bool isInWebWorker = true}) {
         SqliteEnvironment(fileSystem: fs),
       );
 
-      final databaseImpl = WasmDatabase(sqlite3: sqlite3, path: 'my_app.db');
+      final databaseImpl =
+          WasmDatabase(sqlite3: sqlite3, path: 'app_database.db');
       return DatabaseConnection.fromExecutor(databaseImpl);
     }));
   }
